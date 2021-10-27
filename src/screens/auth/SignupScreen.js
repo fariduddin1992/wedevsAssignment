@@ -15,7 +15,6 @@ import {SignupValidation} from '../../validatin/SignupValidation';
 const SignupScreen = ({navigation}) => {
   const dispatch = useDispatch();
   const signupData = useSelector(state => state.signup.inputData);
-  console.log(`signupData`, signupData);
   const status = useSelector(state => state.signup.status);
   const isLoading = useSelector(state => state.signup.isLoading);
 
@@ -27,8 +26,6 @@ const SignupScreen = ({navigation}) => {
   }, [status]);
 
   const handleInputChange = (inputName, inputValue) => {
-    console.log(`inputName`, inputName);
-    console.log(`inputValue`, inputValue);
     dispatch(signupInputHandle(inputName, inputValue));
   };
   const handleSubmit = () => {

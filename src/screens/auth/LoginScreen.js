@@ -7,6 +7,7 @@ import {
   Image,
   TouchableOpacity,
   ImageBackground,
+  Keyboard
 } from 'react-native';
 import {Input, Button} from 'native-base';
 import {COLORS, FONTS, icons, SIZES, images} from '../../constants';
@@ -37,23 +38,17 @@ const LoginScreen = ({navigation}) => {
     dispatch(inputAddHandling(inputName, inputValue));
   };
   const handleSubmit = () => {
+    Keyboard.dismiss()
     let validation = LoginInputValidation(inputData);
     if (validation) {
+
       dispatch(handleLogin(inputData));
     }
   };
   const passwordSecured = () => {
     setSecuredText(!securedText);
   };
-  const renderIcon = props => (
-    <TouchableWithoutFeedback onPress={toggleSecureEntry}>
-      <Icon
-        name={secureTextEntry ? 'eye-slash' : 'eye'}
-        size={22}
-        color="#878787"
-      />
-    </TouchableWithoutFeedback>
-  );
+
 
   return (
     <View style={styles.container}>

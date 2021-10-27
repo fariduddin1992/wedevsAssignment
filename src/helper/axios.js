@@ -10,7 +10,7 @@ import { getData } from './HelperFunction';
 // Add a request interceptor
 axios.interceptors.request.use(async (config) => {
         const getToken = await getData('authData');
-        console.log(`getToken`, getToken);
+        
         const token = getToken.token;
         if (token) {
             config.headers['Authorization'] = 'Bearer ' + token; // as return full code with token type

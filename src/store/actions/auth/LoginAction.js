@@ -43,7 +43,6 @@ export const handleLogin = inputData => async dispatch => {
         }
       })
       .catch(error => {
-        console.log(`error check`, error);
         responseData.status = false;
         responseData.isLoading=false
         ToastAndroid.show("Username Or Password Doesnot match!", ToastAndroid.SHORT);
@@ -51,7 +50,7 @@ export const handleLogin = inputData => async dispatch => {
   } catch (err) {
     responseData.status = false;
     responseData.isLoading=false
-    console.log(`error`, err);
+    
   }
   dispatch({type: Types.HANDLE_LOGIN, payload: responseData});
 };

@@ -44,7 +44,7 @@ const BlueInput = props => {
               size={20}
               name={props.icon}
               style={{
-              color: '#fff',
+              color: '#000',
               position:'absolute',
               justifyContent:'center',
               alignItems:'center',

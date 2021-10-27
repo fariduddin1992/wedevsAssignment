@@ -27,7 +27,6 @@ export default function DrawerContent(props) {
 
   const iniitialData =async()=>{
     let userData = await getData('authData');
-    console.log(`userData`, userData);
     setProfileInfo(userData.user_display_name); 
   }
 

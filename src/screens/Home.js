@@ -27,9 +27,6 @@ const Home = ({navigation}) => {
   useEffect(() => {
     let categoryList = categoryData();
     let productList = productListData();
-
-    console.log(`productList`, productList);
-    console.log(`categories`, categories);
     setCategories(categoryList);
     setProduct(productList);
   }, []);
@@ -70,7 +67,6 @@ const Home = ({navigation}) => {
     );
   }
   function onSelectCategory(category) {
-    console.log(`category`, category);
     let productData = product.filter(a => a.categories.includes(category.id));
     setSelectCategoryProduct(productData);
     setSelectedCategory(category);

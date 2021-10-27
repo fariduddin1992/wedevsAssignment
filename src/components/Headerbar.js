@@ -23,7 +23,7 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import {COLORS, FONTS, icons, SIZES, images} from '../constants';
 
 const Headerbar = (navigation) => {
-  console.log(`navigation`, navigation);
+ 
   return (
     <>
       <StatusBar backgroundColor="#6200ee" barStyle="light-content" />
