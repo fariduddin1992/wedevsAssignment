@@ -58,7 +58,7 @@ const LoginScreen = ({navigation}) => {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={images.loginBackground}
+        source={images.signupbackground}
         resizeMode="cover"
         style={styles.image}>
         <View
@@ -66,7 +66,7 @@ const LoginScreen = ({navigation}) => {
             alignItems: 'center',
             justifyContent: 'center',
             height: 200,
-            marginTop: 10,
+            marginTop: 20,
           }}>
           <Image
             source={images.brandLogo}
@@ -85,7 +85,7 @@ const LoginScreen = ({navigation}) => {
             <Text
               style={{
                 ...FONTS.h1,
-                color:COLORS.white
+               
               }}>
               Sign In
             </Text>
@@ -162,7 +162,7 @@ const LoginScreen = ({navigation}) => {
             <Text
               style={{
                 ...FONTS.body3,
-                color:COLORS.white
+                color:COLORS.primary
               }}>
               Don't have an Account?Sign up
             </Text>
